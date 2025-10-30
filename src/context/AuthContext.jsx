@@ -1,6 +1,6 @@
 import {  useState, useEffect } from 'react';
 import { db } from '../data/mockDB';
-import { AuthContext } from './creatContext';
+import { AuthContext } from './CreatContext';
 
 
 export const AuthProvider = ({ children }) => {
