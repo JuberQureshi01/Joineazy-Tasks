@@ -58,7 +58,7 @@ Project Setup Instructions
 
 Clone the repository:
 
-git clone [your-repository-link]
+git clone [https://github.com/JuberQureshi01/Joineazy-Tasks.git](https://github.com/JuberQureshi01/Joineazy-Tasks.git)
 
 
 Navigate to the project directory:
@@ -102,7 +102,7 @@ This section covers the brief on component structure and design decisions as req
 
 For global state, specifically user authentication, I chose the React Context API.
 
-Why? It's a built-in React solution that is perfect for passing auth data (like the user object and login/logout functions) deep down the component tree without prop-drilling.
+Why? It's a built-in React solution that is perfect for passing auth data like the user object and login/logout functions deep down the component tree without prop-drilling.
 
 Alternative: Redux was considered, but it would be overkill for an application of this scale. Context API provides a lightweight and efficient solution.
 
@@ -118,7 +118,7 @@ Persistence: When a user (student or admin) performs an action like submitting a
 
 The src/components directory is organized by feature and role to ensure a clean and scalable architecture.
 
-common/: Contains components used across the entire application (e.g., Layout.jsx, Modal.jsx, ProgressBar.jsx).
+template/: Contains components used across the entire application (e.g., Layout.jsx, Modal.jsx, ProgressBar.jsx).
 
 student/: Contains components used only on the Student dashboard (e.g., AssignmentItem.jsx, SubmissionConfirm.jsx).
 
@@ -129,37 +129,38 @@ This separation makes it easy to find relevant code and manage features independ
 📁 Folder Structure Overview
 
 src/
-├── assets/         # Static assets like images (if any)
+├── assets/                 # Static assets like images (if any)
 │
 ├── components/
-│   ├── admin/      # Admin-only components
+│   ├── admin/              # Admin-only components
 │   │   ├── AssignmentForm.jsx
 │   │   └── StudentStatusTable.jsx
 │   │
-│   ├── common/     # Reusable components
+│   ├── common/             # Reusable shared components
 │   │   ├── Header.jsx
 │   │   ├── Layout.jsx
 │   │   ├── Modal.jsx
 │   │   └── ProgressBar.jsx
 │   │
-│   └── student/    # Student-only components
+│   └── student/            # Student-only components
 │       ├── AssignmentItem.jsx
 │       └── SubmissionConfirm.jsx
 │
 ├── context/
-│   └── AuthContext.jsx # Global auth state (user, login, logout)
+│   └── AuthContext.jsx     # Global auth state (user, login, logout)
 │
 ├── data/
-│   └── mockDB.js   # Mock database
+│   └── mockDB.js           # Mock database for local testing
 │
 ├── hooks/
-│   └── useAuth.js    # Custom hook to access AuthContext
+│   └── useAuth.js          # Custom hook to access AuthContext
 │
 ├── pages/
 │   ├── AdminDashboard.jsx
 │   ├── Login.jsx
 │   └── StudentDashboard.jsx
 │
-├── App.jsx             # Main application component with routing
-├── index.css           # Tailwind CSS directives
-└── main.jsx            # React root renderer
+├── App.jsx                 # Main application component with routing
+├── index.css               # Tailwind CSS directives
+└── main.jsx                # React root renderer
+
