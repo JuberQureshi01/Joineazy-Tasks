@@ -4,7 +4,7 @@ This project is a clean, responsive, role-based dashboard for a student-assignme
 
 🚀 Live Demo
 
-[<-- Insert your live Vercel/Netlify deployment link here -->]
+[Live Demo](https://joineazy-tasks.vercel.app/)
 
 ✨ Key Features
 
@@ -129,38 +129,37 @@ This separation makes it easy to find relevant code and manage features independ
 📁 Folder Structure Overview
 
 src/
-├── assets/                 # Static assets like images (if any)
+├── assets/ # Static assets like images (if any)
 │
 ├── components/
-│   ├── admin/              # Admin-only components
-│   │   ├── AssignmentForm.jsx
-│   │   └── StudentStatusTable.jsx
-│   │
-│   ├── common/             # Reusable shared components
-│   │   ├── Header.jsx
-│   │   ├── Layout.jsx
-│   │   ├── Modal.jsx
-│   │   └── ProgressBar.jsx
-│   │
-│   └── student/            # Student-only components
-│       ├── AssignmentItem.jsx
-│       └── SubmissionConfirm.jsx
+│ ├── admin/ # Admin-only components
+│ │ ├── AssignmentForm.jsx
+│ │ └── StudentStatusTable.jsx
+│ │
+│ ├── common/ # Reusable components
+│ │ ├── Header.jsx
+│ │ ├── Layout.jsx
+│ │ ├── Modal.jsx
+│ │ └── ProgressBar.jsx
+│ │
+│ └── student/ # Student-only components
+│ ├── AssignmentItem.jsx
+│ └── SubmissionConfirm.jsx
 │
 ├── context/
-│   └── AuthContext.jsx     # Global auth state (user, login, logout)
+│ └── AuthContext.jsx # Global auth state (user, login, logout)
 │
 ├── data/
-│   └── mockDB.js           # Mock database for local testing
+│ └── mockDB.js # Mock database
 │
 ├── hooks/
-│   └── useAuth.js          # Custom hook to access AuthContext
+│ └── useAuth.js # Custom hook to access AuthContext
 │
 ├── pages/
-│   ├── AdminDashboard.jsx
-│   ├── Login.jsx
-│   └── StudentDashboard.jsx
+│ ├── AdminDashboard.jsx
+│ ├── Login.jsx
+│ └── StudentDashboard.jsx
 │
-├── App.jsx                 # Main application component with routing
-├── index.css               # Tailwind CSS directives
-└── main.jsx                # React root renderer
-
+├── App.jsx # Main application component with routing
+├── index.css # Tailwind CSS directives
+└── main.jsx # React root renderer
