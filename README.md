@@ -128,38 +128,79 @@ This separation makes it easy to find relevant code and manage features independ
 
 📁 Folder Structure Overview
 
-src/
-├── assets/ # Static assets like images (if any)
-│
-├── components/
-│ ├── admin/ # Admin-only components
-│ │ ├── AssignmentForm.jsx
-│ │ └── StudentStatusTable.jsx
-│ │
-│ ├── common/ # Reusable components
-│ │ ├── Header.jsx
-│ │ ├── Layout.jsx
-│ │ ├── Modal.jsx
-│ │ └── ProgressBar.jsx
-│ │
-│ └── student/ # Student-only components
-│ ├── AssignmentItem.jsx
-│ └── SubmissionConfirm.jsx
-│
-├── context/
-│ └── AuthContext.jsx # Global auth state (user, login, logout)
-│
-├── data/
-│ └── mockDB.js # Mock database
-│
-├── hooks/
-│ └── useAuth.js # Custom hook to access AuthContext
-│
-├── pages/
-│ ├── AdminDashboard.jsx
-│ ├── Login.jsx
-│ └── StudentDashboard.jsx
-│
-├── App.jsx # Main application component with routing
-├── index.css # Tailwind CSS directives
-└── main.jsx # React root renderer
+
+This project follows a modular and organized folder structure to maintain scalability and readability.
+
+1. src/
+
+Main source directory containing all application code and configurations.
+
+2. assets/
+
+Contains static files such as images, icons, or other media assets used across the app.
+
+3. components/
+
+Houses all the React components divided into three main subfolders:
+
+admin/ → Components specific to the admin dashboard.
+
+AssignmentForm.jsx: Form component for creating or editing assignments.
+
+StudentStatusTable.jsx: Displays student progress or submission status.
+
+common/ → Reusable components shared across admin and student sections.
+
+Header.jsx: Application header/navigation bar.
+
+Layout.jsx: Main layout wrapper for consistent structure.
+
+Modal.jsx: Reusable modal dialog component.
+
+ProgressBar.jsx: Displays loading or completion progress.
+
+student/ → Components specific to the student dashboard.
+
+AssignmentItem.jsx: Displays individual assignments.
+
+SubmissionConfirm.jsx: Handles assignment submission confirmation.
+
+4. context/
+
+Contains global state management files using React Context API.
+
+AuthContext.jsx: Manages user authentication (login, logout, and user data).
+
+5. data/
+
+Stores local or mock data.
+
+mockDB.js: Acts as a mock database to simulate backend functionality.
+
+6. hooks/
+
+Contains custom React hooks for reusability.
+
+useAuth.js: Custom hook to access authentication context easily.
+
+7. pages/
+
+Contains main application pages or views.
+
+AdminDashboard.jsx: Admin dashboard interface.
+
+StudentDashboard.jsx: Student dashboard interface.
+
+Login.jsx: Login page for both admin and students.
+
+8. App.jsx
+
+The root component that defines all routes and renders the main layout.
+
+9. index.css
+
+Contains Tailwind CSS directives and custom styles used throughout the project.
+
+10. main.jsx
+
+Entry point of the React app where the root component (App.jsx) is rendered into the DOM.
